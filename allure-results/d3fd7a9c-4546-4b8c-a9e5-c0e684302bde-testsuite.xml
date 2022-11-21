@@ -1,0 +1,107 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1668906542166' stop='1668906549673'>
+    <name>My Login application</name>
+    <title>My Login application</title>
+    <test-cases>
+        <test-case start='1668906542170' status='passed' stop='1668906542175'>
+            <name>"before all" hook</name>
+            <title>"before all" hook</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.107'/>
+            </parameters>
+            <steps>
+                <step start='1668906542178' status='undefined'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='433b1c7d-7cf0-45d0-be5d-b9af7fd92540-attachment.json' type='application/json' size='41'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1668906542305' status='failed' stop='1668906549666'>
+            <name>should login with valid credentials</name>
+            <title>should login with valid credentials</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.107'/>
+            </parameters>
+            <steps>
+                <step start='1668906542319' status='passed' stop='1668906548311'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='2e63666e-9f4e-4240-b29b-be84c6731ef1-attachment.json' type='application/json' size='54'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1668906548395' status='passed' stop='1668906548550'>
+                    <name>POST /session/:sessionId/element/cf96e966-72f6-4a7b-8f05-b6ab39ddd9e7/clear</name>
+                    <title>POST /session/:sessionId/element/cf96e966-72f6-4a7b-8f05-b6ab39ddd9e7/clear</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1668906548570' status='passed' stop='1668906548809'>
+                    <name>POST /session/:sessionId/element/cf96e966-72f6-4a7b-8f05-b6ab39ddd9e7/value</name>
+                    <title>POST /session/:sessionId/element/cf96e966-72f6-4a7b-8f05-b6ab39ddd9e7/value</title>
+                    <attachments>
+                        <attachment title='Request' source='c5f32e40-6e46-4268-adf9-8931b2e5f9ac-attachment.json' type='application/json' size='24'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1668906548811' status='passed' stop='1668906548873'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='48d7f2c5-40f2-4e09-bfdd-9e737e57da27-attachment.json' type='application/json' size='53'/>
+                        <attachment title='Response' source='2b4b2730-6806-41bc-920a-09ec5c8a61e9-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1668906548891' status='passed' stop='1668906549078'>
+                    <name>POST /session/:sessionId/element/65e88c7c-4c4f-44cd-85e6-d9176b106665/clear</name>
+                    <title>POST /session/:sessionId/element/65e88c7c-4c4f-44cd-85e6-d9176b106665/clear</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1668906549082' status='passed' stop='1668906549398'>
+                    <name>POST /session/:sessionId/element/65e88c7c-4c4f-44cd-85e6-d9176b106665/value</name>
+                    <title>POST /session/:sessionId/element/65e88c7c-4c4f-44cd-85e6-d9176b106665/value</title>
+                    <attachments>
+                        <attachment title='Request' source='96a70e1e-5f92-4350-9b5c-68f215cdcdb2-attachment.json' type='application/json' size='36'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1668906549406' status='passed' stop='1668906549656'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='dbc8dceb-bb1b-4698-9cb7-07df930857bf-attachment.png' type='image/png' size='43598'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Response' source='de6193fb-5e9c-4efa-9c1a-cbce5d3bee39-attachment.json' type='application/json' size='83'/>
+            </attachments>
+            <failure>
+                <message>TypeError: Cannot read properties of undefined (reading 'click')</message>
+                <stack-trace>TypeError: Cannot read properties of undefined (reading 'click')
+                    at LoginPage.login (C:\Users\Nico\Documents\CODIGO\Week 14\test\pageobjects\/login.page.js:30:30)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at UserContext.&lt;anonymous> (C:\Users\Nico\Documents\CODIGO\Week 14\test\specs\/example.e2e.js:10:9)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
