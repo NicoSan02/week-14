@@ -65,10 +65,16 @@ class Purchase {
         await this.inputZipCode.setValue(zipCode);
     }
 
-    async incompleteForm1 (lastName, zipCode) {
-        await this.inputFirstName.setValue();
+    async incompleteForm1 (firstName, lastName, zipCode) {
+        await this.inputFirstName.setValue(firstName);
+        await this.inputLastName.setValue();
+        await this.inputZipCode.setValue();
+    }
+
+    async incompleteForm2 (firstName, lastName, zipCode) {
+        await this.inputFirstName.setValue(firstName);
         await this.inputLastName.setValue(lastName);
-        await this.inputZipCode.setValue(zipCode);
+        await this.inputZipCode.setValue();
     }
 }
 

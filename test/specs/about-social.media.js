@@ -18,8 +18,6 @@ describe('standard_user purchase', () => {
         await Sidebar.aboutBtn.click();
         await expect(browser).toHaveUrl('https://saucelabs.com/');
         await Sidebar.facebookIcon.waitForClickable();
-        // await browser.pause(12000);
-        // await Sidebar.facebookIcon.scrollIntoView();
         await Sidebar.facebookIcon.click();
         await browser.switchWindow('https://www.facebook.com/saucelabs');
         await expect(browser).toHaveUrl('https://www.facebook.com/saucelabs');
@@ -31,8 +29,8 @@ describe('standard_user purchase', () => {
         await browser.switchWindow('https://saucelabs.com/');
         await Sidebar.linkedinIcon.waitForClickable();
         await Sidebar.linkedinIcon.click();
-        await browser.switchWindow('https://www.linkedin.com/company/891955');
-        await expect(browser).toHaveUrl('https://www.linkedin.com/company/891955');
+        await browser.switchWindow('Iniciar sesión | LinkedIn');
+        await expect(browser).toHaveUrlContaining('https://www.linkedin.com');
         await browser.switchWindow('https://saucelabs.com/');
     });
 

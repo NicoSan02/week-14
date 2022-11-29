@@ -66,7 +66,7 @@ describe('standard_user purchase', () => {
         await Purchase.continueShoppingBtn.click();
     })
 
-    it('Should add Bike Light to cart and cancel checkout', async () => {
+    it('Should add Bike Light to cart, test errors in checkout information and cancel checkout', async () => {
         await InventoryPage.addBikeLight.click();
         await InventoryPage.shoppingCartBtn.click();
         await Purchase.checkoutBtn.click();
@@ -74,7 +74,12 @@ describe('standard_user purchase', () => {
         await expect(Purchase.errorMsg).toHaveText('Error: First Name is required');
         browser.refresh();
         await Purchase.incompleteForm1('testName', ' ', ' ')
+        await Purchase.continueBtn.click();
         await expect(Purchase.errorMsg).toHaveText('Error: Last Name is required')
+        browser.refresh();
+        await Purchase.incompleteForm2('testName', 'testLastName', ' ')
+        await Purchase.continueBtn.click();
+        await expect(Purchase.errorMsg).toHaveText('Error: Postal Code is required')
         browser.refresh();
         await LoginPage.btnBurgerMenu.click();
         await Sidebar.resetBtn.click();
