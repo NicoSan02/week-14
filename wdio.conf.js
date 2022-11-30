@@ -24,6 +24,7 @@ exports.config = {
         './test/specs/**/*.js'
         // './test/specs/purchase.js'
         // './test/specs/about-social.media.js'
+        // './test/specs/inventory-social.media.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -52,7 +53,7 @@ exports.config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-    
+
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.

@@ -4,7 +4,7 @@ import Purchase from '../pageobjects/purchase.page';
 import Sidebar from '../pageobjects/sidebar';
 
 
-describe('standard_user purchase', () => {
+describe('standard_user inventory navigation and successful purchase of a product', () => {
     beforeAll('Navigate to url', ()=> {
         browser.url("https://www.saucedemo.com/");
     })
@@ -50,8 +50,6 @@ describe('standard_user purchase', () => {
         await InventoryPage.addBackpack.click();
         await InventoryPage.shoppingCartBtn.click();
         await expect(browser).toHaveUrl('https://www.saucedemo.com/cart.html');
-        // await expect(this.title).toExist();
-        // await expect(this.title).toHaveTextContaining('YOUR CART');
         await Purchase.continueShoppingBtn.click();
     })
 
@@ -73,11 +71,11 @@ describe('standard_user purchase', () => {
         await Purchase.continueBtn.click(),
         await expect(Purchase.errorMsg).toHaveText('Error: First Name is required');
         browser.refresh();
-        await Purchase.incompleteForm1('testName', ' ', ' ')
+        await Purchase.completeForm('testName', '', '')
         await Purchase.continueBtn.click();
         await expect(Purchase.errorMsg).toHaveText('Error: Last Name is required')
         browser.refresh();
-        await Purchase.incompleteForm2('testName', 'testLastName', ' ')
+        await Purchase.completeForm('testName', 'testLastName', '')
         await Purchase.continueBtn.click();
         await expect(Purchase.errorMsg).toHaveText('Error: Postal Code is required')
         browser.refresh();
@@ -99,5 +97,4 @@ describe('standard_user purchase', () => {
     await Purchase.backHomeBtn.click();
     await expect(browser).toHaveUrl('https://www.saucedemo.com/inventory.html');
     })
-
 });

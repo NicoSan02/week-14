@@ -52,15 +52,17 @@ class InventoryPage {
         return $('.shopping_cart_link');
     }
 
-    // /**
-    //  * a method to encapsule automation code to interact with the page
-    //  * e.g. to login using username and password
-    //  */
-    // async login (username, password) {
-    //     await this.inputUsername.setValue(username);
-    //     await this.inputPassword.setValue(password);
-    //     await this.btnLogin.click();
-    // }
+   get twitterIconInv () {
+    return $('#page_wrapper > footer > ul > li.social_twitter > a')
+   }
+
+   get facebookIconInv () {
+    return $('#page_wrapper > footer > ul > li.social_facebook > a')
+   }
+
+   get linkedinIconInv () {
+    return $('#page_wrapper > footer > ul > li.social_linkedin > a')
+   }
 
 }
 

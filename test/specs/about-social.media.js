@@ -1,9 +1,7 @@
 import LoginPage from '../pageobjects/login.page';
-import InventoryPage from '../pageobjects/inventory.page';
-import Purchase from '../pageobjects/purchase.page';
 import Sidebar from '../pageobjects/sidebar';
 
-describe('standard_user purchase', () => {
+describe('Test About page and social media links from About page', () => {
     beforeAll('Navigate to url', ()=> {
         browser.url("https://www.saucedemo.com/");
     })
@@ -13,7 +11,7 @@ describe('standard_user purchase', () => {
         await expect(browser).toHaveUrl('https://www.saucedemo.com/inventory.html');
     });
 
-    it('Should open About page and go to social media pages', async () => {
+    it('Should open About page and go to social media pages from About page', async () => {
         await LoginPage.btnBurgerMenu.click();
         await Sidebar.aboutBtn.click();
         await expect(browser).toHaveUrl('https://saucelabs.com/');
@@ -29,6 +27,7 @@ describe('standard_user purchase', () => {
         await browser.switchWindow('https://saucelabs.com/');
         await Sidebar.linkedinIcon.waitForClickable();
         await Sidebar.linkedinIcon.click();
+        browser.pause(12000);
         await browser.switchWindow('Iniciar sesión | LinkedIn');
         await expect(browser).toHaveUrlContaining('https://www.linkedin.com');
         await browser.switchWindow('https://saucelabs.com/');
