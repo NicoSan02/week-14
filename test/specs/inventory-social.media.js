@@ -1,7 +1,7 @@
 import LoginPage from '../pageobjects/login.page';
 import InventoryPage from '../pageobjects/inventory.page';
 
-describe('Test social media links in inventory page', () => {
+describe('Tests for social media links in inventory page', () => {
     beforeAll('Navigate to url', ()=> {
         browser.url("https://www.saucedemo.com/");
     })

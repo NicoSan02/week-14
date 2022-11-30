@@ -14,7 +14,8 @@ Continued working with [WebdriverIO](https://webdriver.io/docs/gettingstarted/) 
 ```
 
 ## Tech
-This project uses WebdriverIO to perform E2E tests on the webpage and Javascript to write the tests.
+This project uses WebdriverIO to run E2E tests on the webpage.
+This project uses Javascript as primary lenguage.
 
 <br>
 

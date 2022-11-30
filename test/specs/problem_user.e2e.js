@@ -1,7 +1,7 @@
 import loginPage from '../pageobjects/login.page';
 import LoginPage from  '../pageobjects/login.page';
 
-describe('My Login application', () => {
+describe('problem_user login', () => {
     beforeAll('Navigate to url', ()=> {
         browser.url("https://www.saucedemo.com/");
     })

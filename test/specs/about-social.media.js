@@ -1,7 +1,7 @@
 import LoginPage from '../pageobjects/login.page';
 import Sidebar from '../pageobjects/sidebar';
 
-describe('Test About page and social media links from About page', () => {
+describe('Tests for About page and social media links from About page', () => {
     beforeAll('Navigate to url', ()=> {
         browser.url("https://www.saucedemo.com/");
     })
